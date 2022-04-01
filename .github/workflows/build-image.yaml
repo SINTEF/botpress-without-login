@@ -2,9 +2,10 @@ name: Create and publish a softwaire container image
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
+    tags: ["*"]
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 env:
   REGISTRY: ghcr.io
