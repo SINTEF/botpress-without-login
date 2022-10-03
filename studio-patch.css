@@ -1,4 +1,0 @@
-/** Hide the blue button link in the topmenu as it may confuse the users */
-#mainLayout header .style__cta_btn___1zWua {
-	display: none;
-}

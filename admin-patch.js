@@ -30,6 +30,7 @@ const observer = new MutationObserver((mutations) => {
 		if (invalidCredentialsError) {
 			return;
 		}
+		document.querySelector('.login_box').parentElement.style.display = 'none';
 		// Disable the login inputs to prevent the user from entering wrong credentials
 		// For example if the user press a key while the application is loading
 		emailLogin.disabled = true;
@@ -48,6 +49,7 @@ const observer = new MutationObserver((mutations) => {
 	const confirmPassword = document.getElementById('confirmPassword'); 
 	if (emailRegister && passwordRegister && confirmPassword &&
 		emailRegister.value === '' && passwordRegister.value === '' && confirmPassword.value === '') {
+		document.querySelector('.login_box').parentElement.style.display = 'none';
   	emailRegister.disabled = true;
 		passwordRegister.disabled = true;
 		confirmPassword.disabled = true;

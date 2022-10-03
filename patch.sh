@@ -17,12 +17,3 @@ done
 echo "Patching $url"
 sed -i 's/<div id="root"><\/div>/<div id="root"><\/div><script src="admin\/static\/js\/admin-patch\.js"><\/script>/' /botpress/data/assets/admin/ui/public/index.html
 
-url="http://localhost:3000/studio/patch"
-until $(wget --spider --quiet --tries=20 --timeout=2 $url >/dev/null 2>&1); do
-  echo "Waiting for $url to start..."
-  sleep 3
-done
-
-echo "Patching $url"
-sed -i 's/<\/head>/  <link href="assets\/studio\/ui\/public\/css\/studio-patch\.css" rel="stylesheet" \/><\/head>/' /botpress/data/assets/studio/ui/public/index.html
-
