@@ -1,6 +1,6 @@
-FROM botpress/server:12.30.2
+FROM botpress/server:12.30.6
 USER root
-# Install tini to manage the processes correctly 
+# Install tini to manage the processes correctly
 # I tried s6-overlay but it didn't work when QEmu is in the loop
 RUN apt install -y tini
 # Import the files
